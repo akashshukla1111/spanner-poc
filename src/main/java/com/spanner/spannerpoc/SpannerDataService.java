@@ -17,7 +17,8 @@ public class SpannerDataService {
                 .mark(user.getMark())
                 .facility(4008)
                 .build();
-        return userRepository.save(entity);
+        UserEntity save = userRepository.save(entity);
+        return save;
     }
 
     public UserEntity findById(final String id) {
